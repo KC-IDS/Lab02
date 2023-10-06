@@ -105,8 +105,8 @@ The lowest is Oceania and the highest is Asia(L contininent)
 
 ```{r Ex3, message = FALSE}
 # Write your code here to answer exercise 3
-
-
+plastic_data_all <- plastic_data_all %>% mutate(ct_mismanaged_plastic_ocean = mismanaged_plastic_ocean/total_mismanage_plastic*100)
+plastic_data_all %>% group_by(region) %>% summarise(avg = median(ct_mismanaged_plastic_ocean))
 
 ```
 
