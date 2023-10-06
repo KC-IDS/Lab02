@@ -92,11 +92,14 @@ Africa with 43 countries/territories
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
+plastic_data_all <- plastic_data_all %>% mutate(total_mismanage_plastic = mismanaged_plastic * population)
+plastic_data_all %>% group_by(region) %>% summarise(avg = mean(total_mismanage_plastic))
 
 
 
 ```
-
+See table for mean mismanaged plastic waste per region.
+The lowest is Oceania and the highest is Asia(L contininent)
 
 ### Ex 3.
 
